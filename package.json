@@ -11,5 +11,6 @@
   "scripts": {
     "go": "bun run ./app.ts"
   },
-  "type": "module"
+  "type": "module",
+  "tags": ["bun", "typescript", "testing", "time"]
 }
