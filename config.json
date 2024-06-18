@@ -1,0 +1,8 @@
+{
+    "tests": 3,
+    "runtimes": {
+        "ts-node": true,
+        "deno": true,
+        "bun": true
+    }
+}

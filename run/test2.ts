@@ -1,0 +1,1 @@
+const table = Array.from({ length: 100000 }, () => Math.random().toString(36));

@@ -1,16 +1,21 @@
 {
-  "name": "runtime",
-  "module": "app.ts",
+  "name": "time_comparer",
+  "main": "app.ts",
+  "description": "",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^20.14.2"
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2"
   },
+  "repository": "https://github.com/rederek64/time_comparer",
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
     "go": "bun run ./app.ts"
   },
-  "type": "module",
   "tags": ["bun", "typescript", "testing", "time"]
 }
