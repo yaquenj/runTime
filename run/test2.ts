@@ -1,1 +1,1 @@
-const table = Array.from({ length: 100000 }, () => Math.random().toString(36));
+const table = Array.from({ length: 1000000 }, () => Math.random().toString(36));
