@@ -1,4 +1,6 @@
-# runtime
+# run time comparer
+
+Put desired .ts files into the /run folder to test their duration of running.
 
 To install dependencies:
 
@@ -9,7 +11,5 @@ bun install
 To run:
 
 ```bash
-bun run app.ts
+bun go
 ```
-
-This project was created using `bun init` in bun v1.1.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
