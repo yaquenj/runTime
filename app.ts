@@ -29,7 +29,7 @@ async function test(runtime: string[], file: string) {
         await proc.exited;
         const then = Date.now();
         stop();
-        console.log(`${chalk.greenBright("✓")} ${then-now}${chalk.redBright("ms")}`);
+        console.log(`${chalk.greenBright("✓")} ${then-now}${chalk.greenBright("ms")}`);
         testdurations.push(then-now);
     }
     return testdurations;
@@ -80,7 +80,7 @@ for (const runtime of Object.keys(config.runtimes))
         for (let i = 0; i <= config.tests; i++) table.addRow();
         for (let f = 0; f < files.length; f++) 
             for (let i = 0; i < config.tests; i++) 
-                table.rows[i].push(data[i + f * config.tests].toLocaleString() + chalk.redBright("ms"));
+                table.rows[i].push(data[i + f * config.tests].toLocaleString() + chalk.greenBright("ms"));
 
         // Calculate average test duration and add it to the last table row
         const averages = new Array<number>(files.length).fill(0);
@@ -88,10 +88,10 @@ for (const runtime of Object.keys(config.runtimes))
             for (let i = 0; i < config.tests; i++) 
                 averages[f] += data[i + f * config.tests];
         for (let f = 0; f < files.length; f++)
-            table.rows[config.tests].push(chalk.grey("avg ") + Math.round(averages[f] / config.tests).toLocaleString() + chalk.redBright("ms"));
+            table.rows[config.tests].push(chalk.grey("avg ") + Math.round(averages[f] / config.tests).toLocaleString() + chalk.greenBright("ms"));
     
         // Display the table
 
         console.log(tables[runtime as keyof typeof config.runtimes].toString());
-    }
 
+    }
